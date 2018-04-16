@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo+第一篇博客]]></title>
+    <url>%2F2018%2F04%2F15%2Fhexo-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[使用hexo写第一篇博客 首先安装Nodejs相关文件(推荐去官网下载安装) 使用sudo npm install -g hexo安装hexosudo npm install -g hexo 终端mkdir新建一个blog目录，然后cd到blog目录下，继续初始化使用hexo init blognpm install 下载相关需要的配置, 执行hexo s(也就是hexo server)可以用浏览器打开ip:4000，看到一个新建的blog。哈哈哈，终于完成了一个。 新建一篇博客hexo new “the name” 发一篇文章三部曲： hexo clean hexo g (hexo generator) hexo d (hexo deploy) 参考:1 Mac上搭建基于GitHub的Hexo博客2 基于hexo+github搭建一个独立博客3 hexo官网4 theme&gt;next主题 结束的时候说明一点，Ubuntu下面不能输入中文的时候加一句$ vim .bashrc$ export LC_ALL=en_US.UTF-8$ export LANG=en_US.UTF-8]]></content>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F15%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
