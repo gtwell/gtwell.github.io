@@ -1,38 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
-  <entry>
-    <title><![CDATA[push github 和一些Linux快捷键]]></title>
-    <url>%2F2018%2F04%2F18%2Fpush-github-%E5%92%8C%E4%B8%80%E4%BA%9BLinux%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
-    <content type="text"><![CDATA[push github1.在GitHub上创建一个新的仓库，为了避免错误，初始化时，不要添加 README, license, o或者 gitignore 文件. 你可以等你将你的本地项目推送到GitHub之后，再来添加这些文件.2.打开 Git Bash.切换到你当前项目的目录下. 12345git initgit add . (代表添加所有文件)git commit -m "本次添加要说明的"git remote add orgin remote (在新建的respository里面copy)git push origin master 参考1.push本地仓库到GitHub vimvim 编辑多个文件1vim filename1 filename2 说明：上述命令同时打开了filename1，filename2两个文件，不过文件filename1的内容将占据整个vim窗口，要想在各个文件之间进行切换，我们可通过如下命令 ：n 切换到下一个文件 ：N 切换到上一个文件 ：n filename2 切换到文件filename2 我们提到每个打开的文件都对应着一个buffer，故可通过切换buffer来达到切换文件的目的，如下 ：ls 列出vim打开的所有文件的信息，包括文件名，buffer id等:sp filename(top and down):vsp filename(left and right) ：b2 切换到buffer id为2的buffer :bn 切换到当前buffer的下一个buffer :bp 切换当前buffer的前一个buffer ：bd 关闭当前buffer，对应文件也随之关闭 ：bd2 关闭buffer id为2的buffer，对应文件也随之关闭 我们可通过安装miniBufExplorer插件来简化buffer的切换。不过该插件有时会导致语法高亮显示失效，我们可通过命令：syntax on来恢复高亮。 vim 插件先下载Vundle 123451. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim2. vim ~/.vimrc #添加信息见参考3. vim :PluginInstall 回车下载 下载相关插件只需要在vim .vimrc添加一行需要添加的就ok了 设置了F2为快捷键打开目录 梯度下降(backprop) 不想另开一篇blog,将就着 参考1.vim 多文件编辑（偶的linux笔记）2.业精于勤，荒于嬉；行成于思，毁于随3.Vundle4.nerdtree]]></content>
-      <categories>
-        <category>语言</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[常见的markdown用法]]></title>
-    <url>%2F2018%2F04%2F16%2F%E5%B8%B8%E8%A7%81%E7%9A%84markdown%E7%94%A8%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[1.标题(有的#后面要带空)格#代表标题，一个#表示字号最大，依次为小一号字体 代表标题 代表标题 代表标题 2.加粗，斜体**加粗**加粗*斜体*斜体 3.引用>代表引用 代表引用 4.列表项目* 1* 2* 3 1 2 3 + 1+ 2+ 3 1 2 3 5.分割线3个___, 3个***, 3个—都可以为分割线 6.链接行内链接:要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如， 12This is [an example](http://example.com/ &quot;Title&quot;) inline link. [This link](http://example.net/) has no title attribute. 参考链接:参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记 1This is [an example][id] reference-style link. 你也可以选择性地在两个方括号中间加上一个空格： 1This is [an example] [id] reference-style link. 接着，在文件的任意处，你可以把这个标记的链接内容定义出来： 1[id]: http://example.com/ &quot;Optional Title Here&quot; 7.插入图片Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。行内式的图片语法看起来像是: 12![Alt text](/path/to/img.jpg) ![Alt text](/path/to/img.jpg &quot;Optional title&quot;) 参考式的图片语法则长得像这样： 1![Alt text][id] 「id」是图片参考的名称，图片参考的定义方式则和连结参考一样： 1[id]: url/to/image &quot;Optional title attribute&quot; hexo 中比较特殊：资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 source/images 文件夹中。然后通过类似于 1![](/images/image.jpg) 的方法访问它们。 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 config.yml 文件中的 post_asset_folder 选项设为 true 来打开。当资源文件管理功能打开后，Hexo将会在你每一次通过 hexo new [layout] &lt;title&gt;命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。 123&#123;% asset_path slug %&#125;&#123;% asset_img slug [title] %&#125;&#123;% asset_link slug [title] %&#125; 比如说：当你打开文章资源文件夹功能后，你把一个 example.jpg 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 ! ，它将 不会 出现在首页上。（但是它会在文章中按你期待的方式工作） 正确的引用图片方式是使用下列的标签插件而不是 markdown: 1&#123;% asset_img example.jpg This is an example image %&#125; 通过这种方式，图片将会同时出现在文章和主页以及归档页中。 Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用方括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如: 1&lt;http://example.com/&gt; 8. 制作一份待办事宜 Todo 列表- [ ] 支持以 PDF 格式导出文稿- [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率- [x] 新增 Todo 列表功能- [x] 修复 LaTex 公式渲染问题- [x] 新增 LaTex 公式编号功能 支持以 PDF 格式导出文稿 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率 新增 Todo 列表功能 修复 LaTex 公式渲染问题 新增 LaTex 公式编号功能 9.高亮一段代码1234567@requires_authorizationclass SomeClass: passif __name__ == '__main__':# A comment print('hello world') 参考1. Markdown 语法说明 (简体中文版)2. 欢迎使用Cmd Markdown 编辑阅读器3. Markdown 语法 示例 字体 字号 颜色4. Hexo中播放网易云音乐的实践 每日几个命令:vim 撤销 u 反撤销 ctrl+rvim 打开文件定位到行 vim filename +n如何把ubuntu的本地文件传到云端服务器（SSH） 1scp /home/gtwell/a.png ubuntu@ip:/home/blog/source/images/ 1&lt;!-- more --&gt; hexo中设置阅读全文]]></content>
-      <categories>
-        <category>语言</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[hexo+第一篇博客]]></title>
-    <url>%2F2018%2F04%2F15%2Fhexo-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[使用hexo写第一篇博客 首先安装Nodejs相关文件(推荐去官网下载安装) 使用sudo npm install -g hexo安装hexosudo npm install -g hexo 终端mkdir新建一个blog目录，然后cd到blog目录下，继续初始化使用hexo init blognpm install 下载相关需要的配置, 执行hexo s(也就是hexo server)可以用浏览器打开ip:4000，看到一个新建的blog。哈哈哈，终于完成了一个。 新建一篇博客hexo new “the name” 发一篇文章三部曲： hexo clean hexo g (hexo generator) hexo d (hexo deploy) 参考:1 Mac上搭建基于GitHub的Hexo博客2 基于hexo+github搭建一个独立博客3 hexo官网4 theme&gt;next主题 结束的时候说明一点，Ubuntu下面不能输入中文的时候加一句$ vim .bashrc$ export LC_ALL=en_US.UTF-8$ export LANG=en_US.UTF-8]]></content>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F15%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
 </search>
