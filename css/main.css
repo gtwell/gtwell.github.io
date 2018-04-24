@@ -1779,6 +1779,10 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  box-shadow: inset 0 -1px 0 #333 sf;
 }
 .site-author-name {
   margin: 0;
@@ -1860,7 +1864,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #57d2ff;
+  background: #b3ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3206,4 +3210,16 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/background8.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+.main-inner {
+  opacity: 1;
 }
