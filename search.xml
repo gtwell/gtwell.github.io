@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[conda创建虚拟环境和python换源]]></title>
+    <url>%2F2018%2F05%2F02%2Fconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%92%8Cpython%E6%8D%A2%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[python源 阿里云 http://mirrors.aliyun.com/pypi/simple/ 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/ 豆瓣(douban) http://pypi.douban.com/simple/ 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/ 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/ 临时使用可以在使用pip的时候在后面加上-i参数，指定pip源 永久修改linux: 修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：12[global]index-url = https://pypi.tuna.tsinghua.edu.cn/simple 参考1.更换pip源到国内镜像 conda指令 查看当前存在哪些虚拟环境 1conda env list 或 conda info -e 检查更新当前conda 1conda update conda 查看conda安装了哪些包 1conda list 创建python虚拟环境 1conda create -n your_env_name python=X.X(2.7, 3.6) 查看python版本 1python --version 激活虚拟环境 1source activate your_env_name 这时再使用python --version可以检查当前python版本是否为想要的 对虚拟环境中安装额外的包 1conda install -n your_env_name need_package 关闭虚拟环境 1source deactivate 删除虚拟环境 1conda remove -n your_env_name --all 删除环境中某个包 1conda remove --name your_env_name package_name 参考1.用conda创建python虚拟环境2.Conda常用命令]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python中argparse用法以及深拷贝和浅拷贝]]></title>
     <url>%2F2018%2F04%2F25%2Fpython%E4%B8%ADargparse%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8A%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%2F</url>
     <content type="text"><![CDATA[1.argparse1234567891011import argparseparser = argparse.ArgumentParser("描述")# x代表必须要加的参数# -x代表指定的短参数，如-h, 为可选参数#--x代表指定的长参数，如--help, 为可选参数# 这两种方式可以同存，也可以只存在一个parser.add_argument('-x', type=int, help="the base") args = parser.parse_args() 上一个用法中-x必须指定参数值，否则就会报错，有没有像-h那样，不需要指定参数值的呢，答案是有，通过定义参数时指定action=”store_true”即可，用法如下 123parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true") 类型 type:默认的参数类型为str，如果要进行数学计算，需要对参数进行解析后进行类型转换，如果不能转换则需要报错，这样比较麻烦。 可选值choices=[]: 1234parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2], help="increase output verbosity") 另外增加参数默认值 12345parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2], default=1, help="increase output verbosity") 参考1.python argparse用法总结2.argparse3.python中的argparse4.vim cheat sheet 2.copy() 和 deepcopy() 区别copy() 为浅拷贝，不会产生一个独立的对象单独存在，与原始对象共同变化。deepcopy()为深拷贝，改变原有被复制对象，不会对已经复制出来的新对象产生影响。 123456789import copya = [1, 2, [3, 4]]b = copy.copy(a)c = copy.deepcopy(a)a[2][0] = 1print(a) #[1, 2, [1, 4]]print(b) #[1, 2, [1, 4]]print(c) #[1, 2, [3, 4]] 参考1.Python-copy()与deepcopy()区别 3.导入不同目录下的模块目录形式如下 folder folder1 __init__.py a.py c.py folder2__init__.py b.py __init__.py b.py内容如下 12from folder1 import afrom folder2.c import * 一般这样的情况会报错,我们需要在python环境变量中加入搜索顺序。 1vim ~/.bashrc 1export PYTHONPATH=&apos;.&apos;]]></content>
