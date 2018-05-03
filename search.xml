@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python中os.walk, string的split函数, os.path.split]]></title>
+    <url>%2F2018%2F05%2F03%2Fpython%E4%B8%ADos-walk-string%E7%9A%84split%E5%87%BD%E6%95%B0-os-path-split%2F</url>
+    <content type="text"><![CDATA[python中os.walk, split以及os.path.split介绍1. os.walk2. split 和 join3. os.path.split 1 目录形式如下:12345678910111213141516/home/ubuntu/data/walk/▾ walk1/ ▾ walk3/ 1.py 2.py a.py 1.py 2.py a.py▾ walk2/ 1.py 2.py a.py 1.py 2.py a.py 123456789101112131415161718192021222324252627path = '/home/ubuntu/data/walk'for parent, dirs, files in os.walk(path): print(parent, dirs, files) &gt;&gt;&gt;outputwalk ['walk2', 'walk1'] ['1.py', '2.py', 'a.py']walk/walk2 [] ['1.py', '2.py', 'a.py']walk/walk1 ['walk3'] ['1.py', '2.py', 'a.py']walk/walk1/walk3 [] ['1.py', '2.py', 'a.py']for parent, dirs, files in os.walk(path): for file in files: print(file) &gt;&gt;&gt;output1.py2.pya.py1.py2.pya.py1.py2.pya.py1.py2.pya.py os.walk可以遍历某个文件夹下面所有的文件和目录 2 split and join :123456s = &apos;a b / c d/ e&apos;s = s.split(sep=&apos;/&apos;)print(s)output &gt; [&apos;a b &apos;, &apos; c d&apos;, &apos; e&apos;]&apos;|&apos;.join(s)output &gt; &apos;a b | c d| e&apos; 3 os.path.split(path):1234path = &apos;home/ubuntu/train/a.py&apos;a, b = os.patho.split(path)a &gt; &apos;home/ubuntu/train&apos;b &gt; &apos;a.py&apos; reference1.Python的os.walk()方法详细讲解2.Python中os和shutil模块实用方法集锦3.python 中的split()函数和os.path.split()函数]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[conda创建虚拟环境和python换源]]></title>
     <url>%2F2018%2F05%2F02%2Fconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%92%8Cpython%E6%8D%A2%E6%BA%90%2F</url>
     <content type="text"><![CDATA[python源 阿里云 http://mirrors.aliyun.com/pypi/simple/ 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/ 豆瓣(douban) http://pypi.douban.com/simple/ 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/ 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/ 临时使用可以在使用pip的时候在后面加上-i参数，指定pip源 永久修改linux: 修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：12[global]index-url = https://pypi.tuna.tsinghua.edu.cn/simple 参考1.更换pip源到国内镜像 conda指令 查看当前存在哪些虚拟环境 1conda env list 或 conda info -e 检查更新当前conda 1conda update conda 查看conda安装了哪些包 1conda list 创建python虚拟环境 1conda create -n your_env_name python=X.X(2.7, 3.6) 查看python版本 1python --version 激活虚拟环境 1source activate your_env_name 这时再使用python --version可以检查当前python版本是否为想要的 对虚拟环境中安装额外的包 1conda install -n your_env_name need_package 关闭虚拟环境 1source deactivate 删除虚拟环境 1conda remove -n your_env_name --all 删除环境中某个包 1conda remove --name your_env_name package_name 参考1.用conda创建python虚拟环境2.Conda常用命令]]></content>
