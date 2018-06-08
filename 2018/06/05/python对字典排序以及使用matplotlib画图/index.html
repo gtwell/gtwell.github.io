@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;)load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
+<meta name="description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;))load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python对字典排序以及使用matplotlib画图">
 <meta property="og:url" content="http://gtwell.site/2018/06/05/python对字典排序以及使用matplotlib画图/index.html">
 <meta property="og:site_name" content="天空之城">
-<meta property="og:description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;)load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
+<meta property="og:description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;))load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-05T12:44:37.320Z">
+<meta property="og:updated_time" content="2018-06-08T07:25:12.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python对字典排序以及使用matplotlib画图">
-<meta name="twitter:description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;)load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
+<meta name="twitter:description" content="123456import pickledata = list(range(100))pickle.dump(data, open(&apos;b.pkl&apos;, &apos;wb&apos;))load_data = pickle.load(open(&apos;b.pkl&apos;, &apos;rb&apos;)) 1python3 test.py | tee output.txt python中如何对字典根据值进行排序123456from collections">
 
 
 
@@ -433,7 +433,7 @@
       
 
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line">data = list(range(<span class="number">100</span>))</span><br><span class="line">pickle.dump(data, open(<span class="string">'b.pkl'</span>, <span class="string">'wb'</span>)</span><br><span class="line"></span><br><span class="line">load_data = pickle.load(open(<span class="string">'b.pkl'</span>, <span class="string">'rb'</span>))</span><br></pre></td></tr></table></figure>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line">data = list(range(<span class="number">100</span>))</span><br><span class="line">pickle.dump(data, open(<span class="string">'b.pkl'</span>, <span class="string">'wb'</span>))</span><br><span class="line"></span><br><span class="line">load_data = pickle.load(open(<span class="string">'b.pkl'</span>, <span class="string">'rb'</span>))</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 test.py | tee output.txt</span><br></pre></td></tr></table></figure>
 <p>python中如何对字典根据值进行排序<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line">lists = [<span class="number">1.</span>, <span class="number">2.</span>, <span class="number">3.</span>, <span class="number">1.</span>, <span class="number">2.</span>, <span class="number">2.</span>, <span class="number">3.</span>, <span class="number">1.</span>, <span class="number">1.</span>]</span><br><span class="line">count_values = Counter(lists)</span><br><span class="line">sort_values = sorted(count_values.items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>], reverse=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># [(1.0, 4), (2.0, 3), (3.0, 2)]</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
