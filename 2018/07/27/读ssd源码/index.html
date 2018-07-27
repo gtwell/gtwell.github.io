@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="SQL," />
+  <meta name="keywords" content="pytorch," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="创建和删除创建名为 test_01 的数据库1create database test_01; 删除名为 test_01 的数据库1drop database test_01; test_01数据库改名(不推荐), 后期的mysql已经取消了1rename database olddbname to newdbname">
-<meta name="keywords" content="SQL">
+<meta name="description" content="读ssd源码笔记 从train开始（数据集只读VOC）1234from data import voc# (把voc这个字典所有相关信息读进来)dataset = VOCDetection(root=args.dataset_root，            transform=SSDAugmentation(cfg[&apos;min_dim&apos;], MEANS))   VOCDetection为voc07">
+<meta name="keywords" content="pytorch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL基本语法（一）">
-<meta property="og:url" content="http://gtwell.site/2018/05/25/SQL基本语法（一）/index.html">
+<meta property="og:title" content="读ssd源码">
+<meta property="og:url" content="http://gtwell.site/2018/07/27/读ssd源码/index.html">
 <meta property="og:site_name" content="天空之城">
-<meta property="og:description" content="创建和删除创建名为 test_01 的数据库1create database test_01; 删除名为 test_01 的数据库1drop database test_01; test_01数据库改名(不推荐), 后期的mysql已经取消了1rename database olddbname to newdbname">
+<meta property="og:description" content="读ssd源码笔记 从train开始（数据集只读VOC）1234from data import voc# (把voc这个字典所有相关信息读进来)dataset = VOCDetection(root=args.dataset_root，            transform=SSDAugmentation(cfg[&apos;min_dim&apos;], MEANS))   VOCDetection为voc07">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-25T14:24:12.920Z">
+<meta property="og:updated_time" content="2018-07-27T12:56:54.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQL基本语法（一）">
-<meta name="twitter:description" content="创建和删除创建名为 test_01 的数据库1create database test_01; 删除名为 test_01 的数据库1drop database test_01; test_01数据库改名(不推荐), 后期的mysql已经取消了1rename database olddbname to newdbname">
+<meta name="twitter:title" content="读ssd源码">
+<meta name="twitter:description" content="读ssd源码笔记 从train开始（数据集只读VOC）1234from data import voc# (把voc这个字典所有相关信息读进来)dataset = VOCDetection(root=args.dataset_root，            transform=SSDAugmentation(cfg[&apos;min_dim&apos;], MEANS))   VOCDetection为voc07">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://gtwell.site/2018/05/25/SQL基本语法（一）/"/>
+  <link rel="canonical" href="http://gtwell.site/2018/07/27/读ssd源码/"/>
 
 
 
 
 
-  <title>SQL基本语法（一） | 天空之城</title>
+  <title>读ssd源码 | 天空之城</title>
   
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://gtwell.site/2018/05/25/SQL基本语法（一）/">
+    <link itemprop="mainEntityOfPage" href="http://gtwell.site/2018/07/27/读ssd源码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gtwell">
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SQL基本语法（一）</h1>
+          <h1 class="post-title" itemprop="name headline">读ssd源码</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T20:34:01+08:00">
-                2018-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T20:52:18+08:00">
+                2018-07-27
               </time>
             
 
@@ -365,8 +365,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SQL/" itemprop="url" rel="index">
-                    <span itemprop="name">SQL</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  758
+                  1,307
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  7
                 </span>
               
             </div>
@@ -433,35 +433,24 @@
       
 
       
-        <hr>
-<h3 id="创建和删除"><a href="#创建和删除" class="headerlink" title="创建和删除"></a>创建和删除</h3><p>创建名为 test_01 的数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database test_01;</span><br></pre></td></tr></table></figure></p>
-<p>删除名为 test_01 的数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database test_01;</span><br></pre></td></tr></table></figure></p>
-<p>test_01数据库改名(不推荐), 后期的mysql已经取消了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rename database olddbname to newdbname</span><br></pre></td></tr></table></figure></p>
+        <h3 id="读ssd源码笔记"><a href="#读ssd源码笔记" class="headerlink" title="读ssd源码笔记"></a>读<code>ssd</code>源码笔记</h3><ul>
+<li>从<code>train</code>开始（数据集只读<code>VOC</code>）<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> voc</span><br><span class="line"><span class="comment"># (把voc这个字典所有相关信息读进来)</span></span><br><span class="line">dataset = VOCDetection(root=args.dataset_root，</span><br><span class="line">            transform=SSDAugmentation(cfg[<span class="string">'min_dim'</span>], MEANS))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>VOCDetection为voc0712.py文件下的一个类，进入VOCDetection<br>几个重要的属性：<br><code>root</code>路径,<br><code>image_sets</code>=[(‘2007’, ‘trainval’), (‘2012’, ‘trainval’)]<br><code>transform</code>对<code>target_transform</code>过来的图像处理以及后面bbox处理<br><code>target_transform</code>处理xml文件，得出框的位置和标签,   <code>_annopath</code>为xml文件名,<br><code>_imgpath</code>为jpg文件名,<br><code>ids</code>为trainval处理的列表,方便把xml和jpg文件名联系起来。<br><code>__getitem__</code>把数据集变成可迭代的对象，<br><code>self.pull_item()</code><br>输入id，输出<code>img, [xmin, ymin, xmax, ymax, label]</code>这个列表可以有多个，因为图片中的边界框可以有多个。<br>纵观整个<code>VOCDetector</code>目的是把xml文件解析以及把所有图片和xml读取进来。</p>
 <a id="more"></a>
-<h3 id="对一张表的修改"><a href="#对一张表的修改" class="headerlink" title="对一张表的修改"></a>对一张表的修改</h3><p>新建数据表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table employee (id int(10),name char(20),phone int(12));</span><br></pre></td></tr></table></figure>
-<p>删除一张表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table name;</span><br></pre></td></tr></table></figure></p>
-<p>插入数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表的名字(列名a,列名b,列名c) values(值1,值2,值3);</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">insert into employee(id,name,phone) values(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">insert into employee values(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">insert into employee(id,name) values(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure>
-<p>重命名一张表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table old_name rename new_name;</span><br></pre></td></tr></table></figure></p>
-<h3 id="对一列的修改-对表结构的修改"><a href="#对一列的修改-对表结构的修改" class="headerlink" title="对一列的修改(对表结构的修改)"></a>对一列的修改(对表结构的修改)</h3><p>增加一列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add colunm 列名　数据类型　约束;</span><br></pre></td></tr></table></figure></p>
-<p>新增加的列，被默认放置在这张表的最右边。如果要把增加的列插入在指定位置，则需要在语句的最后使用<code>after</code>关键词(<code>after 列1</code> 表示新增的列被放置在 “列1” 的后面。<br><br>如果想放在第一列的位置，则使用 FIRST 关键词<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table employee add column height2 int(4) default 170 first;</span><br></pre></td></tr></table></figure></p>
-<p>删除一列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名字 drop 列名字;</span><br></pre></td></tr></table></figure></p>
-<p>重命名一列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名字 change 原列名 新列名 数据类型 约束;</span><br></pre></td></tr></table></figure></p>
-<p>改变数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名字 modify 列名字 新数据类型;</span><br></pre></td></tr></table></figure></p>
-<p>修改表中某个值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名字 set 列1=值1,列2=值2 where 条件;</span><br></pre></td></tr></table></figure></p>
-<p>删除一行的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名字 where 条件;</span><br></pre></td></tr></table></figure></p>
-<p>关键字 LIKE 在SQL语句中和通配符一起使用，通配符代表未知字符。SQL中的通配符是 _ 和 % 。其中 _ 代表一个未指定字符，% 代表不定个未指定字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select name,age,phone from employee where name like &apos;J%&apos;;</span><br><span class="line">select name,age,phone from employee where phone like &apos;1101__&apos;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名字 add index 索引名 (列名);</span><br><span class="line">create index 索引名 on 表名字 (列名);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table employee add index idx_id (id);  #在employee表的id列上建立名为idx_id的索引</span><br><span class="line"></span><br><span class="line">create index idx_name on employee (name);   #在employee表的name列上建立名为idx_name的索引</span><br></pre></td></tr></table></figure>
-<p>使用命令 <code>show index from 表名字</code>查看刚才新建的索引</p>
-<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>创建视图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create view 视图名 (列a,列b,列c) as select 列1,列2,列3 FROM 表名字;</span><br></pre></td></tr></table></figure></p>
-<h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>导入操作，可以把一个文件里的数据保存进一张表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load data local infile &apos;文件路径和文件名&apos; into table 表名字;</span><br></pre></td></tr></table></figure></p>
-<h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u root -p 数据库名&gt;备份文件名;   #备份整个数据库</span><br><span class="line"></span><br><span class="line">mysqldump -u root -p 数据库名 表名字&gt;备份文件名;  #备份整个表</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u root -p mysql_shiyan &gt; bak.sql;</span><br></pre></td></tr></table></figure>
-<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><p>先新建一个database test<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database test;</span><br></pre></td></tr></table></figure></p>
-<p>退出来，命令行中执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p <span class="built_in">test</span> &lt; bak.sql</span><br></pre></td></tr></table></figure></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.shiyanlou.com/courses/9/labs/76/document" target="_blank" rel="noopener">MySQL 基础课程</a></p>
+<ul>
+<li>网络架构图<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enumerate(extra_layers[1::2], 2)</span><br><span class="line"># 2 means from 2 start</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>vgg(base_)</code>主体网络<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">1     [Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">2      ReLU(inplace),</span><br><span class="line">3      Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">4      ReLU(inplace),</span><br><span class="line">5      MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False), # 150 * 150</span><br><span class="line">6      Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">7      ReLU(inplace),</span><br><span class="line">8      Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">9      ReLU(inplace),</span><br><span class="line">10     MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False), # 75 * 75</span><br><span class="line">11     Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">12     ReLU(inplace),</span><br><span class="line">13     Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">14     ReLU(inplace),</span><br><span class="line">15     Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">16     ReLU(inplace),</span><br><span class="line">17     MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=True), # 38 * 38</span><br><span class="line">18     Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">19     ReLU(inplace),</span><br><span class="line">20     Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">21     ReLU(inplace),</span><br><span class="line">22     Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">23     ReLU(inplace),</span><br><span class="line">       # 接一个 此时尺寸还是 38 * 38</span><br><span class="line">24     MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False), # 19 * 19</span><br><span class="line">25     Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">26     ReLU(inplace),</span><br><span class="line">27     Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">28     ReLU(inplace),</span><br><span class="line">29     Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">30     ReLU(inplace),</span><br><span class="line">31     MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=False), # 19 * 19</span><br><span class="line">32     Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)),</span><br><span class="line">33     ReLU(inplace),</span><br><span class="line">34     Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1)),</span><br><span class="line">35     ReLU(inplace)]</span><br><span class="line">       # 接一个 尺寸是 19 * 19</span><br></pre></td></tr></table></figure></p>
+<p> <code>extra_</code>新的添加网络<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1     [Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1)),</span><br><span class="line">2     Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)),</span><br><span class="line">      # 接一个 尺寸是 10 * 10</span><br><span class="line">3     Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1)),</span><br><span class="line">4     Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)),</span><br><span class="line">      # 接一个 尺寸是 5 * 5</span><br><span class="line">5     Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1)),</span><br><span class="line">6     Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1)),</span><br><span class="line">      # 接一个 尺寸是 3 * 3</span><br><span class="line">7     Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1)),</span><br><span class="line">8     Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))]</span><br><span class="line">      # 接一个 尺寸是 1 * 1</span><br></pre></td></tr></table></figure></p>
+<p><code>head_</code>(六次回归和六次分类网络)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1    ([Conv2d(512, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">2      Conv2d(1024, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">3      Conv2d(512, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">4      Conv2d(256, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">5      Conv2d(256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">6      Conv2d(256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))],</span><br><span class="line">1     [Conv2d(512, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">2      Conv2d(1024, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">3      Conv2d(512, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">4      Conv2d(256, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">5      Conv2d(256, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),</span><br><span class="line">6      Conv2d(256, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))])</span><br></pre></td></tr></table></figure></p>
+<p><code>coco</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;&apos;num_classes&apos;: 201,</span><br><span class="line"> &apos;lr_steps&apos;: (280000, 360000, 400000),</span><br><span class="line"> &apos;max_iter&apos;: 400000,</span><br><span class="line"> &apos;feature_maps&apos;: [38, 19, 10, 5, 3, 1],</span><br><span class="line"> # featuremap尺寸</span><br><span class="line"> &apos;min_dim&apos;: 300,</span><br><span class="line"> # 原图大小</span><br><span class="line"> &apos;steps&apos;: [8, 16, 32, 64, 100, 300],</span><br><span class="line"> # 原图除以steps会缩放到与feature_maps为类似同一个尺寸</span><br><span class="line"> &apos;min_sizes&apos;: [21, 45, 99, 153, 207, 261],</span><br><span class="line"> &apos;max_sizes&apos;: [45, 99, 153, 207, 261, 315],</span><br><span class="line"> &apos;aspect_ratios&apos;: [[2], [2, 3], [2, 3], [2, 3], [2], [2]],</span><br><span class="line"> &apos;variance&apos;: [0.1, 0.2],</span><br><span class="line"> &apos;clip&apos;: True,</span><br><span class="line"> &apos;name&apos;: &apos;COCO&apos;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>生成bounding box<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成bounding box 并与原图进行匹配</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">voc:</span></span><br><span class="line"><span class="string">&#123;'num_classes': 21,</span></span><br><span class="line"><span class="string"> 'lr_steps': (80000, 100000, 120000),</span></span><br><span class="line"><span class="string"> 'max_iter': 120000,</span></span><br><span class="line"><span class="string"> 'feature_maps': [38, 19, 10, 5, 3, 1],</span></span><br><span class="line"><span class="string"> 'min_dim': 300,</span></span><br><span class="line"><span class="string"> 'steps': [8, 16, 32, 64, 100, 300],</span></span><br><span class="line"><span class="string"> 'min_sizes': [30, 60, 111, 162, 213, 264],</span></span><br><span class="line"><span class="string"> 'max_sizes': [60, 111, 162, 213, 264, 315],</span></span><br><span class="line"><span class="string"> 'aspect_ratios': [[2], [2, 3], [2, 3], [2, 3], [2], [2]],</span></span><br><span class="line"><span class="string"> 'variance': [0.1, 0.2],</span></span><br><span class="line"><span class="string"> 'clip': True,</span></span><br><span class="line"><span class="string"> 'name': 'VOC'&#125;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt <span class="keyword">as</span> sqrt</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> product</span><br><span class="line"></span><br><span class="line">feature_maps = voc[<span class="string">'feature_maps'</span>]</span><br><span class="line">steps = voc[<span class="string">'steps'</span>]</span><br><span class="line">min_sizes = voc[<span class="string">'min_sizes'</span>]</span><br><span class="line">image_size = voc[<span class="string">'min_dim'</span>]</span><br><span class="line">max_sizes = voc[<span class="string">'max_sizes'</span>]</span><br><span class="line">aspect_ratios = voc[<span class="string">'aspect_ratios'</span>]</span><br><span class="line"></span><br><span class="line">mean = []</span><br><span class="line"><span class="keyword">for</span> k, f <span class="keyword">in</span> enumerate(feature_maps):</span><br><span class="line">    <span class="keyword">for</span> i, j <span class="keyword">in</span> product(range(f), repeat=<span class="number">2</span>):</span><br><span class="line">        <span class="comment"># f_k 约等于feature_maps</span></span><br><span class="line">        f_k = <span class="number">300</span> / steps[k]</span><br><span class="line">        <span class="comment"># unit center x,y</span></span><br><span class="line">        cx = (j + <span class="number">0.5</span>) / f_k</span><br><span class="line">        cy = (i + <span class="number">0.5</span>) / f_k</span><br><span class="line"></span><br><span class="line">        <span class="comment"># aspect_ratio: 1</span></span><br><span class="line">        <span class="comment"># rel size: min_size</span></span><br><span class="line">        s_k = min_sizes[k]/image_size</span><br><span class="line">        mean += [cx, cy, s_k, s_k]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># aspect_ratio: 1</span></span><br><span class="line">        <span class="comment"># rel size: sqrt(s_k * s_(k+1))</span></span><br><span class="line">        s_k_prime = sqrt(s_k * (max_sizes[k]/image_size))</span><br><span class="line">        mean += [cx, cy, s_k_prime, s_k_prime]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># rest of aspect ratios</span></span><br><span class="line">        <span class="keyword">for</span> ar <span class="keyword">in</span> aspect_ratios[k]:</span><br><span class="line">            mean += [cx, cy, s_k*sqrt(ar), s_k/sqrt(ar)]</span><br><span class="line">            mean += [cx, cy, s_k/sqrt(ar), s_k*sqrt(ar)]</span><br><span class="line">    output = torch.Tensor(mean).view(<span class="number">-1</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">output:</span></span><br><span class="line"><span class="string">output[0] = tensor([ 0.0133,  0.0133,  0.1000,  0.1000])</span></span><br><span class="line"><span class="string">output[1] = tensor([ 0.0133,  0.0133,  0.1414,  0.1414])</span></span><br><span class="line"><span class="string">.</span></span><br><span class="line"><span class="string">.</span></span><br><span class="line"><span class="string">.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -482,7 +471,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://gtwell.site/2018/05/25/SQL基本语法（一）/" title="SQL基本语法（一）">http://gtwell.site/2018/05/25/SQL基本语法（一）/</a>
+    <a href="http://gtwell.site/2018/07/27/读ssd源码/" title="读ssd源码">http://gtwell.site/2018/07/27/读ssd源码/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -497,7 +486,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SQL/" rel="tag"># SQL</a>
+            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
           
         </div>
       
@@ -525,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/15/归并排序和快速排序算法-2/" rel="next" title="归并排序和快速排序算法(2)">
-                <i class="fa fa-chevron-left"></i> 归并排序和快速排序算法(2)
+              <a href="/2018/07/17/随便写点/" rel="next" title="随便写点.md">
+                <i class="fa fa-chevron-left"></i> 随便写点.md
               </a>
             
           </div>
@@ -534,10 +523,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/05/python对字典排序以及使用matplotlib画图/" rel="prev" title="python对字典排序以及使用matplotlib画图">
-                python对字典排序以及使用matplotlib画图 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -698,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建和删除"><span class="nav-number">1.</span> <span class="nav-text">创建和删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对一张表的修改"><span class="nav-number">2.</span> <span class="nav-text">对一张表的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对一列的修改-对表结构的修改"><span class="nav-number">3.</span> <span class="nav-text">对一列的修改(对表结构的修改)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">4.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图"><span class="nav-number">5.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入"><span class="nav-number">6.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出"><span class="nav-number">7.</span> <span class="nav-text">导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复"><span class="nav-number">8.</span> <span class="nav-text">恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#读ssd源码笔记"><span class="nav-number">1.</span> <span class="nav-text">读ssd源码笔记</span></a></li></ol></div>
             
 
           </div>
