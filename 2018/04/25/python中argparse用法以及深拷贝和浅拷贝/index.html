@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="天空之城">
 <meta property="og:description" content="1.argparse1234567891011import argparseparser = argparse.ArgumentParser(&quot;描述&quot;)#  x代表必须要加的参数# -x代表指定的短参数，如-h, 为可选参数#--x代表指定的长参数，如--help, 为可选参数# 这两种方式可以同存，也可以只存在一个parser.add_argument(&apos;-x&apos;, type=int, help">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-26T02:18:07.551Z">
+<meta property="og:updated_time" content="2018-08-01T01:39:38.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python中argparse用法以及深拷贝和浅拷贝">
 <meta name="twitter:description" content="1.argparse1234567891011import argparseparser = argparse.ArgumentParser(&quot;描述&quot;)#  x代表必须要加的参数# -x代表指定的短参数，如-h, 为可选参数#--x代表指定的长参数，如--help, 为可选参数# 这两种方式可以同存，也可以只存在一个parser.add_argument(&apos;-x&apos;, type=int, help">
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  490
+                  495
                 </span>
               
 
@@ -425,7 +425,7 @@
 <hr>
 <h2 id="2-copy-和-deepcopy-区别"><a href="#2-copy-和-deepcopy-区别" class="headerlink" title="2.copy() 和 deepcopy() 区别"></a>2.copy() 和 deepcopy() 区别</h2><p>copy() 为浅拷贝，不会产生一个独立的对象单独存在，与原始对象共同变化。<br>deepcopy()为深拷贝，改变原有被复制对象，不会对已经复制出来的新对象产生影响。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]]</span><br><span class="line">b = copy.copy(a)</span><br><span class="line">c = copy.deepcopy(a)</span><br><span class="line">a[<span class="number">2</span>][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">print(a)  <span class="comment">#[1, 2, [1, 4]]</span></span><br><span class="line">print(b)  <span class="comment">#[1, 2, [1, 4]]</span></span><br><span class="line">print(c)  <span class="comment">#[1, 2, [3, 4]]</span></span><br></pre></td></tr></table></figure>
-<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/qq_32907349/article/details/52190796" target="_blank" rel="noopener">1.Python-copy()与deepcopy()区别</a></p>
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/qq_32907349/article/details/52190796" target="_blank" rel="noopener">1.Python-copy()与deepcopy()区别</a><br><a href="https://jingyan.baidu.com/article/c74d6000bf860d0f6a595dfb.html" target="_blank" rel="noopener">2.copy deepcoy = 区别</a></p>
 <hr>
 <h2 id="3-导入不同目录下的模块"><a href="#3-导入不同目录下的模块" class="headerlink" title="3.导入不同目录下的模块"></a>3.导入不同目录下的模块</h2><p><strong>目录形式如下</strong></p>
 <ul>
